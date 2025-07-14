@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Agile Framework Selector</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="bg-white w-full max-w-3xl p-8 rounded-lg shadow-lg animate-fadeIn">
+    <h1 class="text-2xl font-bold mb-4 text-center">🚀 Agile Framework Selector</h1>
+    <div class="h-2 bg-gray-200 rounded-full mb-6">
+      <div id="progress" class="h-full bg-blue-500 rounded-full transition-all duration-300 ease-in-out"></div>
+    </div>
+
+    <form id="wizard">
+      <div id="steps">
+        <!-- 6 dynamic question groups injected here -->
+      </div>
+
+      <div class="flex justify-between mt-6">
+        <button type="button" id="prevBtn" class="px-4 py-2 bg-gray-300 rounded disabled:opacity-50" disabled>Back</button>
+        <button type="button" id="nextBtn" class="px-4 py-2 bg-blue-600 text-white rounded">Next</button>
+      </div>
+    </form>
+
+    <div id="summary" class="hidden mt-8 p-6 bg-green-50 rounded-lg">
+      <h2 class="text-xl font-bold mb-4 text-green-700">✅ Recommended Framework:</h2>
+      <div class="flex items-center mb-2">
+        <span class="text-2xl mr-2">📘</span><p id="chosen" class="text-lg font-semibold"></p>
+      </div>
+      <p><strong>Pros:</strong> <span id="pros"></span></p>
+      <p><strong>Cons:</strong> <span id="cons"></span></p>
+      <h3 class="mt-4 font-semibold">Next Steps:</h3>
+      <p id="steps" class="mt-1"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
